@@ -4,36 +4,7 @@
     body {
       font-size: 1em;
       --padding: 20px;
-    }
-
-    .black-line {
-      height: 40px;
-      display: block;
-      position: relative;
-    }
-
-    .black-line::before {
-      content: "";
-      background: black;
-      top: 15%;
-      height: 70%;
-      left: 25px;
-      width: calc(100% - 50px);
-      display: flex;
-      position: absolute;
-      z-index: -1;
-      display: block;
-      border-radius: 2px;
-    }
-
-    #level {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      border: 2px solid black;
-      text-align: center;
-      margin-left: 40px;
-      font-size: 1.1em;
+      font-family: Helvetica;
     }
 
     input {
@@ -49,19 +20,57 @@
       border: 2px solid black;
     }
 
-    #name {
-      /*margin-left: 20px;*/
-      width: 160px;
-    }
     </style>
   </head>
   <body>
     <span>
       <span class="black-line">
+        <style>
+        .black-line {
+          height: 40px;
+          display: block;
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr 3fr 2fr;
+          align-items: center;
+        }
+
+        .black-line::before {
+          content: "";
+          background: black;
+          top: 15%;
+          height: 70%;
+          left: 25px;
+          width: calc(100% - 50px);
+          display: flex;
+          position: absolute;
+          z-index: -1;
+          display: block;
+          border-radius: 2px;
+        }
+        </style>
+
         <input id="level" class="text" />
+        <style>
+        #level {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          border: 2px solid black;
+          text-align: center;
+          margin-left: 0;
+          font-size: 1.1em;
+        }
+        </style>
         <label>
           Name:
           <input id="name" />
+          <style>
+          #name {
+            /*margin-left: 20px;*/
+            width: 160px;
+          }
+          </style>
         </label>
         <label>
           Race:
